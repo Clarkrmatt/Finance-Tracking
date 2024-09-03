@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .container 
+        {
+        flex-basis:100%;
+         justify-content:center;
+        }
+        input 
+        {width:90%;
+        margin:5px;
+        height:45px;
+        border-radius:5px;
+        text-align:center;
+        font-size:125%;
+        }
+        button
+        {width:50%;
+        margin:10px;
+        height:35px;
+        border-radius:5px;
+        text-align:center;
+        font-size:125%;
+        }
+        .radiocont
+        {
+            display:flex;
+            justify-content:center;
+            font-size:125%;
+        }
+        .radiocont input 
+        {
+        background-color:red;
+        }
+    </style>
+</head>
+<body align="center" width="425px">
+    <div class="container">
+    <fieldset>
+    <h1>Income</h1>
+    <form name="Incoming"
+    method="POST"
+    action="https://script.google.com/macros/s/AKfycbxrHGwxC-jnnTSrKaeKFwY8RfSEkaTd8aUgLeDIHwsPEeqWcYbNRvzJELhuW34Y_qXljA/exec"
+    >
+        <input type="numeric" name="Value" min="0.01" placeholder="$0.00" pattern="[0-9]+\.[0-9][0-9]$" required><br>
+        <div class="radiocont">
+
+        <label class="label">Regular Payroll
+        <input type="radio" name="Source" value="ECL" checked="checked">
+        <span class="checkmark"></span>
+        </label>
+        <label class="label">Other Income
+        <input type="radio" name="Source" value="Other">
+        <span class="checkmark"></span>
+        </label>
+        </div>
+        <input type="paragraph" placeholder="Any Other Notes?" name="Notes">
+        <button type="Submit">Submit</button>
+        
+    </form>
+    </fieldset>
+        </div>
+</body>
+  
